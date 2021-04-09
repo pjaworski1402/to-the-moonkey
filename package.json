@@ -1,0 +1,35 @@
+{
+    "name": "webpack-babel",
+    "version": "1.0.0",
+    "description": "Starter with Webpack & Babel.js",
+    "license": "MIT",
+    "author": {
+        "name": "Piotr Jaworski",
+        "email": "p.jaworski1402@gmail.com"
+    },
+    "scripts": {
+        "clear": "rimraf ./dist",
+        "clear:all": "rimraf node_modules/ && npm run clear",
+        "prebuild": "npm run clear",
+        "build": "npm run build:development",
+        "build:development": "webpack --config webpack/webpack.config.js",
+        "build:production": "webpack --config webpack/webpack.config.js --env.production",
+        "watch": "npm run build:development -- -w",
+        "start": "http-server dist/ -c-1",
+        "dev": "webpack-dev-server --config webpack/webpack.config.js"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.10.2",
+        "@babel/preset-env": "^7.10.2",
+        "babel-loader": "^8.1.0",
+        "file-loader": "^6.0.0",
+        "http-server": "^0.12.3",
+        "rimraf": "^3.0.2",
+        "webpack": "^4.43.0",
+        "webpack-bundle-analyzer": "^3.8.0",
+        "webpack-cli": "^3.3.11",
+        "webpack-dev-server": "^3.11.0",
+        "webpack-merge": "^4.2.2"
+    },
+    "dependencies": {}
+}
