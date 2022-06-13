@@ -29,6 +29,31 @@ module.exports = (env) => {
                     options: {
                         name: '[name].[ext]',
                     },
+                },
+                {
+                    test: /\.css$/,
+                    exclude: /node_modules/,
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                    },
+                },
+                {
+                    test: /\.svg$/,
+                    exclude: /node_modules/,
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                    },
+                }
+                ,
+                {
+                    test: /\.png$/,
+                    exclude: /node_modules/,
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                    },
                 }
             ]
         },
@@ -41,7 +66,7 @@ module.exports = (env) => {
     };
 
     // Builds
-    const build = env && env.production ? 'prod': 'dev';
+    const build = env && env.production ? 'prod' : 'dev';
     config = merge.smart(
         config,
         require(path.join(root, 'webpack', 'builds', `webpack.config.${build}`))

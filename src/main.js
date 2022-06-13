@@ -1,3 +1,7 @@
 import "./index.html";
 
-// Your code
+import Main from "./game/Main";
+
+const game = new Main();
+
+game.initGame();

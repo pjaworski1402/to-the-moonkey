@@ -4,10 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>To the moonkey!</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        #game{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            color:white;
+        }
+        #info{
+            position: absolute;
+            left: 24px;
+        }
+</style>
 </head>
 <body>
-Hello world
+    <div id="game">
+        <div id="info">
+            ➡️ rotate right </br>
+            ⬅️ rotate left </br>
+            <b>SPACE</b> dash
+        </div>
+    </div>
 </body>
 <script src="bundle.js"></script>
 </html>
